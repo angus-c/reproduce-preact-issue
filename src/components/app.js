@@ -2,11 +2,17 @@ import { h, Component } from 'preact';
 import { Router } from 'preact-router';
 
 import Header from './header';
-import Parent from './parent';
 import Profile from './profile';
 
-
 export default class App extends Component {
+
+	constructor(props) {
+		super(props);
+		this.state = {
+			error: false
+		};
+	}
+
 	/** Gets fired when the route changes.
 	 *	@param {Object} event		"change" event from [preact-router](http://git.io/preact-router)
 	 *	@param {string} event.url	The newly routed URL
@@ -18,7 +24,7 @@ export default class App extends Component {
 	render() {
 		return (
 			<div id="app">
-				<Profile/>
+				{!this.state.error && <Profile/>}
 			</div>
 		);
 	}
