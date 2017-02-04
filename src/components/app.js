@@ -2,7 +2,6 @@ import { h, Component } from 'preact';
 import { Router } from 'preact-router';
 
 import Header from './header';
-import Parent from './parent';
 import Profile from './profile';
 
 
@@ -18,7 +17,7 @@ export default class App extends Component {
 	render() {
 		return (
 			<div id="app">
-				<Parent/>
+				<Profile/>
 			</div>
 		);
 	}
