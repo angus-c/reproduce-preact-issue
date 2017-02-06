@@ -3,4 +3,4 @@
 ```
 npm run dev
 ```
-served on http://0.0.0.0:8080/
+served on http://localhost:8080/
